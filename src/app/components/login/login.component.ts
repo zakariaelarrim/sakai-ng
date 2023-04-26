@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ConfigService } from '../../service/app.config.service';
 import { AppConfig } from '../../api/appconfig';
 import { Subscription } from 'rxjs';
+import {Router} from "@angular/router";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -29,12 +30,12 @@ export class LoginComponent implements OnInit, OnDestroy {
   valCheck: string[] = ['remember'];
 
   password: string;
-  
+
   config: AppConfig;
-  
+
   subscription: Subscription;
 
-  constructor(public configService: ConfigService){ }
+  constructor(public configService: ConfigService, private router: Router){ }
 
   ngOnInit(): void {
     this.config = this.configService.config;
@@ -43,6 +44,9 @@ export class LoginComponent implements OnInit, OnDestroy {
     });
   }
 
+  onSubmit(){
+      this.router.navigateByUrl('bienvenue')
+  }
   ngOnDestroy(): void {
     if(this.subscription){
       this.subscription.unsubscribe();
