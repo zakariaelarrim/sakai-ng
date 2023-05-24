@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChoseEtapeComponent } from './chose-etape.component';
+import { StackedBarChartComponent } from './stacked-bar-chart.component';
 
-describe('ChoseEtapeComponent', () => {
-  let component: ChoseEtapeComponent;
-  let fixture: ComponentFixture<ChoseEtapeComponent>;
+describe('StackedBarChartComponent', () => {
+  let component: StackedBarChartComponent;
+  let fixture: ComponentFixture<StackedBarChartComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ChoseEtapeComponent ]
+      declarations: [ StackedBarChartComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ChoseEtapeComponent);
+    fixture = TestBed.createComponent(StackedBarChartComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
